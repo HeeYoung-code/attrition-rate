@@ -3,3 +3,4 @@ pandas
 streamlit_option_menu
 joblib
 numpy
+xgboost
