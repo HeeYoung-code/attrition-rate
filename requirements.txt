@@ -4,3 +4,4 @@ streamlit_option_menu
 joblib
 numpy
 xgboost
+category_encoders
