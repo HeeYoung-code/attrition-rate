@@ -8,14 +8,11 @@ st.set_page_config(page_title="Attrition Rate", page_icon="🚀")
 
 st.title('🚀조기퇴사 가능성 예측 모델 TEST')
 
-selected2 = option_menu(None, ["Home", "Input Data", "Upload File"], 
-    icons=['house', 'gear', "list-task"], 
+selected2 = option_menu(None, ["Input Data", "Upload File"], 
+    icons=['gear', "list-task"], 
     menu_icon="cast", default_index=0, orientation="horizontal")
 
-if selected2 == "Home":
-    st.header('AI 활용 저연차 직원 퇴사율 최소화 방안')
-
-elif selected2 == "Input Data":
+if selected2 == "Input Data":
     st.header("개별 직원 데이터 입력")
     st.markdown('개별 직원의 상세 데이터를 입력할 경우 조기퇴사 가능성을 예측해볼 수 있습니다')
 
@@ -30,8 +27,8 @@ elif selected2 == "Input Data":
             # 게이지바를 통한 입력값 설정
             satisfaction_level = st.slider("회사 만족도", float(0), float(1))
             last_evaluation = st.slider("최근 업무 평가 점수", float(0), float(1))
-            average_monthly_hours = st.slider("한달 평균 근무 시간", float(90), float(320))
-            time_spend_company = st.slider("근속 연수", float(2), float(10))
+            average_monthly_hours = st.slider("한달 평균 근무 시간", float(90), float(320), step=1.0)
+            time_spend_company = st.slider("근속 연수", float(0), float(10), step=1.0)
 
     with col2 :
             # 옵션 선택을 통한 입력값 설정
